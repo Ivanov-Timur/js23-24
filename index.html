@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ToDoList</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script data-main = "js/app" src = "js/require.js"></script>
+</head>
+<body>
+<script type="text/template" id="wrapper">
+	<div class="wrapper">
+		<ul class="toDo">
+			
+		</ul>
+		<input type="text" class="toDo__add">
+		<button class="icon addBtn"></button>
+	</div>
+</script>
+<script type="text/template" id="toDo">
+	<% for(var i = 0; i < data.length; i++) { %>
+		<li class="toDo__item"><%= data[i] %><span class="icon icon-edit"></span><span class="icon icon-del"  data-value = '<%= i %>'></span></li>
+	<% } %>
+</script>	
+</body>
+</html>
